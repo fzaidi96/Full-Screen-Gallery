@@ -1,0 +1,72 @@
+body {
+    margin: 0px;
+}
+
+#modeButton {
+    position: fixed;
+    bottom: 5px;
+    left: 5px;
+}
+
+.thumbnail-container {
+    position: absolute;
+    left: 30%;
+    width: 500px;
+    overflow-x: scroll;
+    border: solid transparent;
+    border-radius: 10px;
+    margin: 10px;
+    backdrop-filter: blur(30px);
+}
+
+.carousel {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.thumbnails {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+    margin: 0.5rem;
+}
+
+
+.thumbnails img {
+    width: 150px;
+    border-radius: 10px;
+}
+
+.thumbnails.hidden {
+    display: none;
+}
+
+
+#displayImage {
+    height: 100vh;
+    background-image: url(./daymodeimages/LDN_day.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+@media (max-width: 767px) {
+    .thumbnail-container {
+        display: block;
+        position: fixed;
+        left: auto;
+        backdrop-filter: blur(0px);
+    }
+
+    .thumbnails {
+        flex-direction: column; 
+    }
+
+    #hideCarousel {
+        position: fixed;
+        top: 5px;
+        left: 5px;
+
+    }
+}
